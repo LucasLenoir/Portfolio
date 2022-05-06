@@ -3,9 +3,7 @@ header{
     grid-template: 10vh 10vh/ 10vw 10vw 10vw 70vw;
     place-items: center;
     color: var(--white);
-   
-    
-    // transition: 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
+  
     &> a {
       margin-left: 10px;
       grid-area: 1/1/2/5;
