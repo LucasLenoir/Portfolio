@@ -1,0 +1,23 @@
+foreignObject{
+    
+    
+    
+    &:hover{
+        filter: drop-shadow(0px 5px 10px rgb(251, 251, 251))
+        // background-color: rgb(119, 8, 8);
+        // color: rgb(119, 8, 8);
+        // animation: Pulse 3s infinite;
+    }
+    
+    
+}
+#about, #home, #cases, #contact{
+    cursor: pointer;
+}
+@keyframes Pulse {
+    0%{ filter: drop-shadow(0px 5px 10px rgb(251, 251, 251))}
+    33%{ filter: drop-shadow(none)}
+    66%{ filter: drop-shadow(0px 5px 10px rgb(255, 255, 255))}
+    100%{ filter: drop-shadow(none)}
+
+}

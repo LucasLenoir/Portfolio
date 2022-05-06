@@ -1,0 +1,210 @@
+@font-face {
+  font-family: hand;
+  src: url("/assets/fonts/Vogue.ttf");
+}
+@font-face {
+  font-family: Druk;
+  src: url("/assets/fonts/Druk.ttf");
+}
+@font-face {
+  font-family: Ak;
+  src: url("/assets/fonts/Akzidenz.ttf");
+}
+@font-face {
+  font-family: Mael;
+  src: url("/assets/fonts/MaelstromBold.ttf");
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  --raisin-black: #131313;
+  --dark-liver: rgba(71, 71, 77, 1);
+  --eerie-black: rgba(30, 30, 30, 1);
+  --smoky-black: rgba(12, 11, 10, 1);
+  --onyx: rgba(66, 65, 70, 1);
+  --white: #fff;
+  --shadow-color: #fff;
+  --shadow-color-light: rgba(119, 8, 8);
+}
+
+header {
+  display: grid;
+  grid-template: 10vh 10vh/10vw 10vw 10vw 70vw;
+  place-items: center;
+  color: var(--white);
+}
+header > a {
+  margin-left: 10px;
+  grid-area: 1/1/2/5;
+  color: var(--white);
+  font-family: Druk;
+  font-weight: 500px;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 0.85em;
+  backface-visibility: hidden;
+  place-self: start;
+}
+header > ul > li {
+  font-family: ak;
+  color: var(--white);
+  list-style: none;
+  text-decoration: none;
+}
+header > ul > li > a {
+  font-family: druk;
+  color: var(--white);
+  list-style: none;
+  text-decoration: none;
+}
+
+main {
+  display: grid;
+  grid-template: 80vh/20vw 80vw;
+}
+
+#nav g > foreignObject > button {
+  background: none;
+  border: none;
+  text-transform: uppercase;
+  color: var(--white);
+  font-family: Druk;
+  font-size: 1.5vw;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+#nav g > text {
+  font-family: ak;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+body {
+  background: url("/assets/img/statue.jpg");
+}
+
+.active {
+  background-color: rgb(119, 8, 8);
+  background-blend-mode: overlay;
+}
+
+.container_home {
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  font-family: Mael;
+  position: relative;
+}
+.container_home p {
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  font-size: 12vw;
+}
+.container_home #month {
+  font-size: 6vw;
+}
+
+.main_about {
+  display: grid;
+  grid-template: 100%/60% 40%;
+  background-color: rgba(119, 8, 8, 0.735);
+}
+
+.container_about {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-family: druk;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  line-height: 2rem;
+}
+.container_about h1 {
+  text-transform: uppercase;
+  margin-bottom: 10%;
+}
+
+#canvas {
+  width: 100%;
+  height: 100%;
+}
+
+foreignObject:hover {
+  filter: drop-shadow(0px 5px 10px rgb(251, 251, 251));
+}
+
+#about, #home, #cases, #contact {
+  cursor: pointer;
+}
+
+@keyframes Pulse {
+  0% {
+    filter: drop-shadow(0px 5px 10px rgb(251, 251, 251));
+  }
+  33% {
+    filter: drop-shadow(none);
+  }
+  66% {
+    filter: drop-shadow(0px 5px 10px rgb(255, 255, 255));
+  }
+  100% {
+    filter: drop-shadow(none);
+  }
+}
+
+/*# sourceMappingURL=output.css.map */

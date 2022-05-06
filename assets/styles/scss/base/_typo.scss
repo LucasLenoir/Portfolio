@@ -1,0 +1,19 @@
+$road:"/assets/fonts";
+
+@font-face {
+    font-family: hand;
+    src: url("#{$road}/Vogue.ttf");
+  }
+  
+  @font-face {
+      font-family: Druk;
+      src: url("#{$road}/Druk.ttf");
+    }
+    @font-face {
+      font-family: Ak;
+      src: url("#{$road}/Akzidenz.ttf");
+    }
+    @font-face {
+      font-family: Mael;
+      src: url("#{$road}/MaelstromBold.ttf");
+    }

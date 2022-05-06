@@ -1,0 +1,24 @@
+main {
+  display: grid;
+  grid-template: 80vh/ 20vw 80vw;
+
+
+}
+
+#nav{
+    g > foreignObject > button {
+        background: none;
+        border: none;
+        text-transform: uppercase;
+        color: var(--white);
+        font-family: Druk;
+        font-size: 1.5vw;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+      }
+    g > text {
+        font-family: ak;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+    }
+}

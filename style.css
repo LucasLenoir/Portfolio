@@ -57,10 +57,31 @@ section {
   width: 100vw;
 }
 
+section {
+  position: relative;
+}
+
+#AboutAncre, #ProjectAncre, #ContactAncre {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+svg {
+  z-index: 1000;
+  position: fixed;
+  top: 20%;
+  left: 2%;
+}
+svg g text {
+  fill: white;
+  cursor: pointer;
+}
+
 .isDesktop {
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
   font-family: AK, sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -73,6 +94,7 @@ section {
   /* background:#4801ff;  */
   background-color: #000;
   position: relative;
+  overflow: hidden;
   /* background: url("./asset/img/herobg-hd.webp");  */
   background-blend-mode: color;
   width: 100%;
@@ -122,10 +144,11 @@ section {
   -webkit-transform: translateX(0%);
   visibility: visible;
 }
-.isDesktop .menu ul li a {
+.isDesktop .menu ul li a strong {
   font-family: Ak;
+  text-transform: uppercase;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 40px;
   color: #fff;
   transition: 0.2s;
 }
@@ -270,6 +293,7 @@ section {
 .isDesktop .about {
   height: 100vh;
   width: 100vw;
+  background-color: var(--raisin-black);
   display: flex;
   align-items: center;
   color: white;
@@ -278,7 +302,8 @@ section {
 .isDesktop .aboutContainer {
   background-color: var(--raisin-black);
   height: 100vh;
-  width: 50%;
+  width: 47%;
+  margin-left: 15%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -296,12 +321,6 @@ section {
   .isDesktop .about h1, .isDesktop .about p {
     font-size: 15px;
   }
-}
-.isDesktop #AboutAncre {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 .isDesktop .about p {
   width: 90%;
@@ -464,6 +483,10 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+section {
+  height: 100vh !important;
 }
 
 /*# sourceMappingURL=style.css.map */
