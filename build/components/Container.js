@@ -4,6 +4,7 @@ export const Container = {
     let container = document.createElement("div");
     container.setAttribute("id", "container");
     main.innerHTML = "";
+    console.log("main emptied");
     main.appendChild(container);
     return container;
   },

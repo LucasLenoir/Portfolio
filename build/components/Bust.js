@@ -5,7 +5,8 @@ let main = document.getElementById("main");
 let width = document.getElementById("main").offsetWidth;
 let height = document.getElementById("main").offsetHeight;
 
-
+console.log(width);
+console.log(typeof width);
 
 export function Bust() {
   const scene = new THREE.Scene();
@@ -16,11 +17,8 @@ export function Bust() {
   });
   renderer.setClearColor(0, 0);
   main.appendChild(renderer.domElement);
-
   function CHeckWindowAndSetSizeAndRatio() {
-    let width = document.getElementById("main").offsetWidth;
-    let height = document.getElementById("main").offsetHeight;
-    renderer.setPixelRatio(width / height);
+    renderer.setPixelRatio(width / 2 / height);
     renderer.setSize(width / 2, height);
     if (width < 576) {
       renderer.setSize(width, height / 5);
@@ -29,18 +27,18 @@ export function Bust() {
       renderer.setSize(width, height / 2);
       camera.position.set(0, -130, 4);
     } else {
-      renderer.setSize(width / 2.5, height);
-      camera.position.set(0, -130, 10);
     }
-    renderer.render(scene, camera);
+    renderer.setSize(width / 2.5, height);
+    camera.position.set(0, -130, 10);
     // camera.rotateY(-1);
   }
 
+  CHeckWindowAndSetSizeAndRatio();
   function LoadBustandAnimate() {
     let bust;
     const loader = new GLTFLoader();
     loader.load("../../assets/img/scene3.glb", function (gltf) {
-      
+      console.log("hello");
       bust = gltf.scene;
       gltf.scene.scale.set(0.2, 0.2, 0.1);
       gltf.scene.translateY(200);
@@ -50,7 +48,6 @@ export function Bust() {
       animate();
       // bust.position.setX(0);
     });
-    CHeckWindowAndSetSizeAndRatio();
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.update();
     // scene.background = new THREE.Color("#fffffff");
@@ -66,10 +63,6 @@ export function Bust() {
       scene.add(camera);
     }
   }
- 
+  console.log(scene);
   LoadBustandAnimate();
-  window.addEventListener("resize", () => {
-    CHeckWindowAndSetSizeAndRatio();
-    
-  });
 }

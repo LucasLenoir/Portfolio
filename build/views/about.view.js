@@ -5,9 +5,6 @@ import "../components/Bust";
 import { Bust } from "../components/Bust";
 
 export default function AboutView() {
-  document.querySelectorAll("animate").forEach(el =>{
-    el.beginElement();
-  })
   backgroundMenu();
 
   let container = Container.CreateContainer();
@@ -16,5 +13,10 @@ export default function AboutView() {
 
   let main = document.getElementById("main");
   main.className = "main_about";
+  // let canvas = document.createElement("canvas");
+  // canvas.setAttribute("id", "canvas");
+  // main.appendChild(canvas);
+  // CHeckWindowAndSetSizeAndRatio();
+  // LoadBustandAnimate();
   Bust();
 }
