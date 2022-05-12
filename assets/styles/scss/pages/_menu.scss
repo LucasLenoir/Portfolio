@@ -3,15 +3,20 @@ foreignObject{
     
     
     &:hover{
-        filter: drop-shadow(0px 5px 10px rgb(251, 251, 251))
+        filter: drop-shadow(0px 5px 10px rgb(251, 251, 251));
         // background-color: rgb(119, 8, 8);
         // color: rgb(119, 8, 8);
         // animation: Pulse 3s infinite;
     }
-    
+   
     
 }
+.glow {
+    filter: drop-shadow(0px 5px 10px rgb(251, 251, 251));
+
+}
 #about, #home, #cases, #contact{
+ 
     cursor: pointer;
 }
 @keyframes Pulse {
@@ -20,4 +25,24 @@ foreignObject{
     66%{ filter: drop-shadow(0px 5px 10px rgb(255, 255, 255))}
     100%{ filter: drop-shadow(none)}
 
+}
+#home.active, #about.active, #contact.active, #cases.active{
+    
+         border-right: 2px solid #fff;
+         border-left: 2px solid #fff;
+         // border-top: 10px solid #fff;
+        // border-top: 10px solid #fff;
+        // border-top: 5px groove #fff;
+        // border-left: 5px groove #fff;
+        
+        padding-top: 5px;
+        
+       &::after{
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        color: #fff;
+        width: 10px;
+        height: 10px;
+       }
+    
+    
 }

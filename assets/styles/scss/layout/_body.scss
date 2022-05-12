@@ -3,9 +3,11 @@ $ROAD: '/assets/img';
 
 body{
     background: url("#{$ROAD}/statue.jpg");
+    position: relative;
 }
 
-.active{
+.MenuActive{
     background-color: rgb(119, 8, 8);
     background-blend-mode:overlay;
+    
 }

@@ -6,9 +6,9 @@ let main = document.getElementById("main");
 let width = document.getElementById("main").offsetWidth;
 let height = document.getElementById("main").offsetHeight;
 
-export function Bust() {
+export function Logo() {
   const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(22, width / height, 0.1, 1000);
+  const camera = new THREE.PerspectiveCamera(3, width / height, 0.1, 1000);
   const renderer = new THREE.WebGLRenderer({
     antialias: true,
     alpha: true,
@@ -27,43 +27,33 @@ export function Bust() {
     } else {
     }
     renderer.setSize(width / 2.5, height);
-    camera.position.set(0, -130, 10);
-    // camera.rotateY(-1);
-  }
+    camera.position.set(0, -30, 4);
 
+  }
   CHeckWindowAndSetSizeAndRatio();
-  function LoadBustandAnimate() {
-    let bust;
-    const loader = new GLTFLoader();
-    loader.load("../../assets/img/scene3.glb", function (gltf) {
-      bust = gltf.scene;
-      gltf.scene.scale.set(0.2, 0.2, 0.1);
-      gltf.scene.translateY(200);
-      bust.position.x = 0;
-      bust.position.y = 0;
-      scene.add(bust);
-      animate();
-      // bust.position.setX(0);
-    });
+  function LoadLogoAndAnimate() {
+    const geometry = new THREE.BoxGeometry(1.5, 1.5, 0.5);
+    const logoMaterial = new THREE.TextureLoader().load(
+      "../../assets/img/logo.png"
+    );
+    const material = new THREE.MeshBasicMaterial({ map: logoMaterial });
+    const cube = new THREE.Mesh(geometry, material);
+    scene.add(cube);
+
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.update();
-    // scene.background = new THREE.Color("#fffffff");
-    const light = new THREE.HemisphereLight(0xffffff, 0x000000, 4);
-    const gridHelper = new THREE.GridHelper(2, 9);
-    scene.add(gridHelper);
+    const light = new THREE.HemisphereLight(0xffffff, 0xff0000, 104);
     scene.add(light);
+    light.position.set(30, 10, 0);
     function animate() {
       requestAnimationFrame(animate);
-      bust.rotation.z += 0.01;
+      cube.rotation.z += 0.01;
+      
       controls.update();
       renderer.render(scene, camera);
       scene.add(camera);
     }
+    animate();
   }
-
-  LoadBustandAnimate();
-  window.addEventListener("resize", () => {
-    CHeckWindowAndSetSizeAndRatio();
-  });
+  LoadLogoAndAnimate();
 }
-

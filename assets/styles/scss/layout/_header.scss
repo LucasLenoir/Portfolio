@@ -1,6 +1,6 @@
 header{
     display: grid;
-    grid-template: 10vh 10vh/ 10vw 10vw 10vw 70vw;
+    grid-template: 10vh 10vh/ 15vw 10vw 10vw 70vw;
     place-items: center;
     color: var(--white);
    
@@ -35,10 +35,12 @@ header{
       font-family: druk;
       color: var(--white);
       list-style: none;
-      text-decoration: none;
-
-     
-      
+      text-decoration: none;      
+    }
+    & #logo{
+      margin-top: 5px;
+      // margin-left: 5vw;
+      // font-size: 30px;
     }
     // & .slideUp span{
     //   display: block;

@@ -30,9 +30,9 @@
     pointer-events: none;
    
   }
-  .noOverFlow{
-  overflow: hidden;
-  }
+  // .noOverFlow{
+  // overflow: hidden;
+  // }
   section{
     height: 100vh;
     width: 100vw;
@@ -78,7 +78,7 @@
       /* background:#4801ff;  */
       background-color: #000; 
       position: relative;
-      overflow: hidden;
+     
 
       /* background: url("./asset/img/herobg-hd.webp");  */
       background-blend-mode: color;
@@ -115,7 +115,7 @@
      
     }
     .menu{
-      overflow: hidden;
+      
       visibility: hidden;
       z-index: 1000;
       color: #fff;
@@ -271,7 +271,7 @@
     
     main  {
       
-    overflow: hidden;
+    
     height: 100vh;
     width: 100vw;
     text-align: center;

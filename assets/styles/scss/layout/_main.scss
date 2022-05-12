@@ -1,6 +1,8 @@
 main {
   display: grid;
   grid-template: 80vh/ 20vw 80vw;
+  transition: margin-right 4s cubic-bezier(0.47, 0, 0.745, 0.715);
+
 
 
 }

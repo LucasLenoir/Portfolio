@@ -1,4 +1,4 @@
 export function backgroundMenu() {
   let body = document.querySelector("body");
-  body.className = "active";
+  body.className = "MenuActive";
 }

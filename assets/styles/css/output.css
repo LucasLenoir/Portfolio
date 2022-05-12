@@ -72,12 +72,12 @@ table {
   --onyx: rgba(66, 65, 70, 1);
   --white: #fff;
   --shadow-color: #fff;
-  --shadow-color-light: rgba(119, 8, 8);
+  --red: rgba(119, 8, 8);
 }
 
 header {
   display: grid;
-  grid-template: 10vh 10vh/10vw 10vw 10vw 70vw;
+  grid-template: 10vh 10vh/15vw 10vw 10vw 70vw;
   place-items: center;
   color: var(--white);
 }
@@ -108,10 +108,14 @@ header > ul > li > a {
   list-style: none;
   text-decoration: none;
 }
+header #logo {
+  margin-top: 5px;
+}
 
 main {
   display: grid;
   grid-template: 80vh/20vw 80vw;
+  transition: margin-right 4s cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 
 #nav g > foreignObject > button {
@@ -132,9 +136,10 @@ main {
 
 body {
   background: url("/assets/img/statue.jpg");
+  position: relative;
 }
 
-.active {
+.MenuActive {
   background-color: rgb(119, 8, 8);
   background-blend-mode: overlay;
 }
@@ -159,7 +164,8 @@ body {
 .main_about {
   display: grid;
   grid-template: 100%/60% 40%;
-  background-color: rgba(119, 8, 8, 0.735);
+  background-color: rgba(119, 8, 8, 0.4);
+  backdrop-filter: blur(5px);
 }
 
 .container_about {
@@ -188,6 +194,10 @@ foreignObject:hover {
   filter: drop-shadow(0px 5px 10px rgb(251, 251, 251));
 }
 
+.glow {
+  filter: drop-shadow(0px 5px 10px rgb(251, 251, 251));
+}
+
 #about, #home, #cases, #contact {
   cursor: pointer;
 }
@@ -205,6 +215,65 @@ foreignObject:hover {
   100% {
     filter: drop-shadow(none);
   }
+}
+#home.active, #about.active, #contact.active, #cases.active {
+  border-right: 2px solid #fff;
+  border-left: 2px solid #fff;
+  padding-top: 5px;
+}
+#home.active::after, #about.active::after, #contact.active::after, #cases.active::after {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  color: #fff;
+  width: 10px;
+  height: 10px;
+}
+
+.main_contact {
+  display: grid;
+  grid-template: 100%/60% 40%;
+  background-color: rgba(119, 8, 8, 0.4);
+  backdrop-filter: blur(5px);
+}
+
+.container_contact {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-family: druk;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  line-height: 2rem;
+}
+.container_contact h1 {
+  text-transform: uppercase;
+  margin-bottom: 10%;
+}
+
+.main_cases {
+  display: grid;
+  grid-template: 100%/60% 40%;
+  background-color: rgba(119, 8, 8, 0.4);
+  backdrop-filter: blur(5px);
+}
+
+.container_cases {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-family: druk;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  line-height: 2rem;
+}
+.container_cases h1 {
+  text-transform: uppercase;
+  margin-bottom: 10%;
 }
 
 /*# sourceMappingURL=output.css.map */
