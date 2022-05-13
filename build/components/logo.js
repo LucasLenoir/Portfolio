@@ -8,7 +8,12 @@ let height = document.getElementById("main").offsetHeight;
 
 export function Logo() {
   const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(3, width / height, 0.1, 1000);
+  const camera = new THREE.PerspectiveCamera(
+    55,
+    (40 * width) / 100 / height,
+    0.1,
+    1000
+  );
   const renderer = new THREE.WebGLRenderer({
     antialias: true,
     alpha: true,
@@ -27,28 +32,35 @@ export function Logo() {
     } else {
     }
     renderer.setSize(width / 2.5, height);
-    camera.position.set(0, -30, 4);
-
+    camera.position.set(0, 0, 5);
   }
   CHeckWindowAndSetSizeAndRatio();
   function LoadLogoAndAnimate() {
-    const geometry = new THREE.BoxGeometry(1.5, 1.5, 0.5);
+    const geometry = new THREE.BoxGeometry(1, 1, 1);
     const logoMaterial = new THREE.TextureLoader().load(
       "../../assets/img/logo.png"
     );
-    const material = new THREE.MeshBasicMaterial({ map: logoMaterial });
+    const material = new THREE.MeshStandardMaterial({ map: logoMaterial });
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
 
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.update();
-    const light = new THREE.HemisphereLight(0xffffff, 0xff0000, 104);
+    const light = new THREE.DirectionalLight(0xffffff, 1);
+    light.position.x = -12;
+    light.position.y = -3;
+    light.position.z = 20;
     scene.add(light);
-    light.position.set(30, 10, 0);
+    const lighthelper = new THREE.DirectionalLightHelper(light, 5);
+    scene.add(lighthelper);
+    const clock = new THREE.Clock();
     function animate() {
-      requestAnimationFrame(animate);
-      cube.rotation.z += 0.01;
-      
+      const elapsedTime = clock.getElapsedTime();
+
+      window.requestAnimationFrame(animate);
+      cube.rotation.y = 0.2 * elapsedTime;
+      cube.rotation.x = 0.2 * elapsedTime;
+
       controls.update();
       renderer.render(scene, camera);
       scene.add(camera);

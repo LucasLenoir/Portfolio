@@ -4,7 +4,7 @@ export const Container = {
     let container = document.createElement("div");
     container.setAttribute("id", "container");
     main.innerHTML = "";
-   
+
     main.appendChild(container);
     return container;
   },
@@ -13,7 +13,7 @@ export const Container = {
 export const SecondContainer = {
   CreateSubContainer() {
     let main = document.querySelector("#main");
-    Container = document.querySelector("#Container");
+    let Container = document.querySelector("#Container");
     document.createElement("div");
     div.setAttribute("id", "SecondContainer");
     main.appendChild("id", "SecondContainer");

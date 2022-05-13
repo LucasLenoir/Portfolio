@@ -1,9 +1,8 @@
 import { backgroundMenu } from "../animations/background.menu";
 import { Container } from "../components/Container";
-
 import { Contents } from "../contents/global.contents";
 
-export default function ContactView() {
+export default function CasesView() {
   backgroundMenu();
   document.querySelectorAll("animate").forEach((el) => {
     el.beginElement();

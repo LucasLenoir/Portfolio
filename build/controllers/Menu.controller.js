@@ -2,8 +2,6 @@ import HomeView from "../views/home.view";
 import AboutView from "../views/about.view";
 import ContactView from "../views/contact.view";
 import CasesView from "../views/cases.view";
-import { Path } from "three";
-const container = document.querySelector("container");
 
 export function MenuController() {
   window.addEventListener("onload", HomeView());
