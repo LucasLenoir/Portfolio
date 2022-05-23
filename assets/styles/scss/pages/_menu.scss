@@ -11,12 +11,10 @@ foreignObject{
    
     
 }
-.glow {
-    filter: drop-shadow(0px 5px 10px rgb(251, 251, 251));
 
-}
 #about, #home, #cases, #contact{
- 
+    z-index: 8000;
+ position: relative;
     cursor: pointer;
 }
 @keyframes Pulse {
@@ -37,12 +35,7 @@ foreignObject{
         
         padding-top: 5px;
         
-       &::after{
-        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-        color: #fff;
-        width: 10px;
-        height: 10px;
-       }
+       
     
     
 }

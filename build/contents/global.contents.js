@@ -12,5 +12,20 @@ export const Contents = {
 
   cases: {
     h1: "Selected Cases",
+    li2: "Quizz Game",
+    li1: "Memory Game",
+    li3: "Alpes Resort",
+  },
+  memory: {
+    h2: "Memory Game",
+    p: "Lorem ipsum dolor sit amet. Qui fugiat voluptatem in placeat pariatur eos accusantium quae consequatur harum. Aut inventore deserunt est sapiente amet est sint nihil hic dolor consequuntur.",
+  },
+  quizz: {
+    h2: "Quizz Game",
+    p: "Lorem ipsum dolor sit amet. Qui fugiat voluptatem in placeat pariatur eos accusantium quae consequatur harum. Aut inventore deserunt est sapiente amet est sint nihil hic dolor consequuntur.",
+  },
+  resort: {
+    h2: "Alpes Resort",
+    p: "Lorem ipsum dolor sit amet. Qui fugiat voluptatem in placeat pariatur eos accusantium quae consequatur harum. Aut inventore deserunt est sapiente amet est sint nihil hic dolor consequuntur.",
   },
 };

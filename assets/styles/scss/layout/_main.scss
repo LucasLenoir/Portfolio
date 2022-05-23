@@ -1,6 +1,8 @@
 main {
   display: grid;
-  grid-template: 80vh/ 20vw 80vw;
+  width: 100%;
+  height: 100%;
+  grid-template: 80vh/ 5% 20% 75%;
   transition: margin-right 4s cubic-bezier(0.47, 0, 0.745, 0.715);
 
 
@@ -22,5 +24,51 @@ main {
         font-family: ak;
         text-transform: uppercase;
         letter-spacing: 0.2em;
+       
     }
 }
+#anim{
+  g > text{
+        font-family: ak;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        font-size: 20px;
+       
+  }
+}
+
+
+@media screen and (max-width: 790px){ 
+  #anim{
+    g > text{
+          font-family: ak;
+          text-transform: uppercase;
+          letter-spacing: 0.2em;
+          font-size: 10px;
+         
+    }
+  }
+  #nav{
+    
+     g > foreignObject > button {
+       
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        font-size: 1.5vw ;
+       
+    }
+}
+
+}
+@media screen and (max-height: 724px){
+  #anim{
+    g > text{
+          display: none;
+    }
+  }
+
+}
+
+
+
+

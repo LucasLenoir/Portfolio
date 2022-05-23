@@ -2,34 +2,24 @@ import * as THREE from "three";
 
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-let main = document.getElementById("main");
-let width = document.getElementById("main").offsetWidth;
-let height = document.getElementById("main").offsetHeight;
+const main = document.getElementById("main");
+const width = document.getElementById("main").offsetWidth;
+const height = document.getElementById("main").offsetHeight;
 
 export function Bust() {
   const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(22, width / height, 0.1, 1000);
+  const camera = new THREE.PerspectiveCamera(
+    22,
+    main.offsetWidth / main.offsetHeight,
+    0.1,
+    1000
+  );
   const renderer = new THREE.WebGLRenderer({
     antialias: true,
     alpha: true,
   });
   renderer.setClearColor(0, 0);
   main.appendChild(renderer.domElement);
-  function CHeckWindowAndSetSizeAndRatio() {
-    renderer.setPixelRatio(width / 2 / height);
-    renderer.setSize(width / 2, height);
-    if (width < 576) {
-      renderer.setSize(width, height / 5);
-      camera.position.set(0, -130, 10);
-    } else if (width < 921) {
-      renderer.setSize(width, height / 2);
-      camera.position.set(0, -130, 4);
-    } else {
-    }
-    renderer.setSize(width / 2.5, height);
-    camera.position.set(0, -130, 10);
-    // camera.rotateY(-1);
-  }
 
   CHeckWindowAndSetSizeAndRatio();
   function LoadBustandAnimate() {
@@ -60,10 +50,28 @@ export function Bust() {
       scene.add(camera);
     }
   }
+  function CHeckWindowAndSetSizeAndRatio() {
+    renderer.setPixelRatio(main.offsetWidth / 2 / main.offsetHeight);
+    renderer.setSize(main.offsetWidth, height);
+    if (width < 672) {
+      renderer.setSize(main.offsetWidth / 2.5, main.offsetHeight);
+      camera.position.set(0, -130, 10);
+      camera.getEffectiveFOV(250);
+    } else if (width < 1000) {
+      renderer.setSize(main.offsetWidth / 2.5, main.offsetHeight);
+      camera.position.set(0, -130, 10);
+    } else if (width < 752) {
+      renderer.setSize(main.offsetWidth / 2.5, main.offsetHeight);
+      camera.position.set(0, -130, 10);
+    } else {
+      renderer.setSize(main.offsetWidth, main.offsetHeight);
+      camera.position.set(0, -130, 10);
+    }
 
+    // camera.rotateY(-1);
+  }
   LoadBustandAnimate();
   window.addEventListener("resize", () => {
     CHeckWindowAndSetSizeAndRatio();
   });
 }
-

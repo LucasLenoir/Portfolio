@@ -2,15 +2,17 @@ import * as THREE from "three";
 
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { Container } from "./Container";
 let main = document.getElementById("main");
 let width = document.getElementById("main").offsetWidth;
 let Height = document.getElementById("main").offsetHeight;
 let height = (80 * main.offsetHeight) / 100;
 
-export function Logo() {
+export function Case1(bg) {
+  const container = document.getElementById("container");
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(
-    55,
+    45,
     (40 * main.offsetWidth) / 100 / height,
     0.1,
     1000
@@ -20,29 +22,25 @@ export function Logo() {
     alpha: true,
   });
   renderer.setClearColor(0, 0);
-  main.appendChild(renderer.domElement);
+  container.appendChild(renderer.domElement);
   function CHeckWindowAndSetSizeAndRatio() {
-    const canvas = document.querySelector("canvas");
-    renderer.setPixelRatio(main.offsetWidth / main.offsetHeight);
-    renderer.setSize(main.offsetWidth / 2, height);
+    renderer.setPixelRatio(main.offsetWidth / 2 / height);
+    // renderer.setSize(main.offsetWidth / 2, height);
     if (main.offsetWidth < 576) {
-   
-      renderer.setSize(main.offsetWidth / 2.5, height);
-      camera.position.set(0, 0, 5);
+      renderer.setSize(main.offsetWidth, main.offsetHeight / 2);
+      camera.position.set(0, -130, 10);
     } else if (main.offsetWidth < 921) {
       renderer.setSize(main.offsetWidth, height / 2);
       camera.position.set(0, -130, 4);
     } else {
     }
-     renderer.setSize(main.offsetWidth / 2.5, height);
+    renderer.setSize(main.offsetWidth / 2.5, (80 * height) / 100);
     camera.position.set(0, 0, 5);
   }
   CHeckWindowAndSetSizeAndRatio();
-  function LoadLogoAndAnimate() {
+  function LoadCase1AndAnimate() {
     const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const logoMaterial = new THREE.TextureLoader().load(
-      "../../assets/img/logo.png"
-    );
+    const logoMaterial = new THREE.TextureLoader().load(bg);
     const material = new THREE.MeshStandardMaterial({ map: logoMaterial });
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
@@ -70,5 +68,5 @@ export function Logo() {
     }
     animate();
   }
-  LoadLogoAndAnimate();
+  LoadCase1AndAnimate();
 }

@@ -1,4 +1,4 @@
-import { Container } from "./Container";
+
 
 export function GetDate(parent) {
   let result = `<p><span id="day"></span><span id="month"></span>`;

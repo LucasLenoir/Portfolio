@@ -1,4 +1,9 @@
 export function backgroundMenu() {
-  let body = document.querySelector("body");
-  body.className = "MenuActive";
+  const body = document.querySelector("body");
+  body.classList.add("MenuActive");
+}
+export function greyMenu() {
+  const body = document.querySelector("body");
+
+  body.classList.remove("MenuActive");
 }

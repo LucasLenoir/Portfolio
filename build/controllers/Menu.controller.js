@@ -4,6 +4,7 @@ import ContactView from "../views/contact.view";
 import CasesView from "../views/cases.view";
 
 export function MenuController() {
+ 
   window.addEventListener("onload", HomeView());
   home.addEventListener("click", () => HomeView());
   about.addEventListener("click", () => AboutView());
