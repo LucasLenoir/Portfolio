@@ -23,6 +23,7 @@ checkIfMobileAndApllyStyle();
 
 function scroll() {
   if (window.innerWidth > 640) {
+   
     let index = 0;
     window.addEventListener("wheel", (e) => {
       if (e.deltaY > 0) {

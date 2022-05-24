@@ -9,7 +9,7 @@ const height = document.getElementById("main").offsetHeight;
 export function Bust() {
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(
-    22,
+    26,
     main.offsetWidth / main.offsetHeight,
     0.1,
     1000

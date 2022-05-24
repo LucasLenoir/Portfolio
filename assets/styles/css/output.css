@@ -112,7 +112,7 @@ header #logo {
   margin-top: 5px;
 }
 
-@media screen and (max-width: 1460px) {
+@media screen and (min-width: 904px) {
   header {
     grid-template: 10vh 10vh/15vw 15vw 15vw 70vw;
   }
@@ -125,6 +125,11 @@ header #logo {
 @media screen and (max-height: 790px) {
   #logo {
     font-size: 30px;
+  }
+}
+@media screen and (max-width: 903px) {
+  header {
+    grid-template: 10vh 10vh/35vw 20vw 20vw 25vw;
   }
 }
 main {
@@ -186,6 +191,11 @@ body {
   grid-template: 80% 20%/100%;
 }
 
+#questionMark {
+  font-family: ak;
+  font-weight: 50px;
+}
+
 #MenuActive {
   backdrop-filter: blur(5px);
   background-blend-mode: overlay;
@@ -193,134 +203,6 @@ body {
 
 h1, h2, p {
   text-shadow: 2px 2px 2px black;
-}
-
-.isMobile {
-  display: grid;
-  grid-template-rows: 100%/60% 40%;
-}
-.isMobile main {
-  grid-template: 100%/100%;
-}
-.isMobile #nav, .isMobile #anim, .isMobile #social {
-  display: none;
-}
-.isMobile #toggle {
-  display: block;
-  position: fixed;
-  right: 0;
-  top: 5px;
-  width: 60px;
-  height: 60px;
-  background: url(./assets/icone/menu.png);
-  background-repeat: no-repeat;
-  background-size: 30px;
-  background-position: center;
-  cursor: pointer;
-  z-index: 9990;
-}
-.isMobile #toggle.active {
-  background: url(./assets/icone/close.png);
-  background-repeat: no-repeat;
-  background-size: 25px;
-  background-position: center;
-}
-.isMobile #menu {
-  position: relative;
-  display: none;
-  flex-direction: column;
-  list-style: none;
-  z-index: 10;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 40%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(90deg, rgba(2, 0, 36, 0.764) 5%, rgba(84, 10, 70, 0.709) 64%);
-  transition: 0.2s ease;
-  transform: translateX(150%);
-  -webkit-transform: translateX(150%);
-}
-.isMobile #menu #home, .isMobile #menu #about, .isMobile #menu #contact, .isMobile #menu #cases {
-  padding: 8px;
-}
-.isMobile #menu li {
-  text-decoration: none;
-  font-size: 24px;
-  color: #fff;
-  transition: 0.2s;
-}
-.isMobile #menu.active {
-  transform: translateX(0%);
-  -webkit-transform: translateX(0%);
-  display: flex;
-  width: 100%;
-}
-.isMobile #menu #home.active, .isMobile #menu #about.active, .isMobile #menu #contact.active, .isMobile #menu #cases.active {
-  border-right: 0px solid #fff;
-  border-left: 0px solid #fff;
-}
-.isMobile header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.isMobile header #info2 {
-  display: none;
-}
-.isMobile #main {
-  grid-template: 100%/100%;
-}
-.isMobile .container_about {
-  display: flex;
-  font-size: 10px;
-}
-.isMobile .container_home #baseline {
-  font-size: 15px;
-}
-.isMobile .container_cases {
-  grid-template: 20% 20% 50% 10%/100%;
-  height: 100vh;
-  width: 100vw;
-}
-.isMobile .container_cases h1 {
-  display: none;
-}
-.isMobile .container_cases ul {
-  grid-area: 4/1/4/1;
-}
-.isMobile .container_cases p {
-  grid-area: 3/1/3/1;
-}
-.isMobile .container_contact {
-  display: grid;
-  position: relative;
-  grid-template: 40% 60%/100%;
-}
-.isMobile .container_contact #leftContact {
-  background-color: rgba(255, 255, 255, 0.381);
-  border-radius: 5px;
-  height: 40%;
-}
-.isMobile .container_contact canvas {
-  place-self: center;
-  grid-area: 2/1/2/1;
-  cursor: no-pointer;
-  pointer-events: none;
-}
-.isMobile .container_contact h1 {
-  place-self: center;
-  top: 25%;
-  font-size: 15px;
-}
-.isMobile .container_contact ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 
 .container_home {
@@ -463,6 +345,11 @@ foreignObject:hover {
   display: inline-block;
   width: 40px;
   height: 40px;
+  padding-bottom: 20px;
+}
+.container_contact ul li a:hover {
+  filter: invert(0%);
+  transform: scale(1.5);
 }
 .container_contact #calltoAction {
   padding-top: 10px;
@@ -478,6 +365,11 @@ foreignObject:hover {
   height: 40px;
 }
 
+@media screen and (max-width: 903px) {
+  #leftContact {
+    font-size: 20px;
+  }
+}
 .main_cases {
   backdrop-filter: blur(5px);
 }
@@ -526,10 +418,148 @@ foreignObject:hover {
 .container_cases p {
   grid-area: 2/1/2/1;
   font-family: ak;
-  text-transform: lowercase;
 }
 .container_cases li.active {
   border-bottom: 2px solid #fff;
+}
+
+.isMobile {
+  display: grid;
+  grid-template-rows: 100%/60% 40%;
+}
+.isMobile main {
+  grid-template: 100%/100%;
+}
+.isMobile #nav, .isMobile #anim, .isMobile #social {
+  display: none;
+}
+.isMobile #toggle {
+  display: block;
+  position: fixed;
+  right: 0;
+  top: 5px;
+  width: 60px;
+  height: 60px;
+  background: url(./assets/icone/menu.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+  z-index: 9990;
+}
+.isMobile #toggle.active {
+  background: url(./assets/icone/close.png);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center;
+}
+.isMobile #menu {
+  position: relative;
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, rgba(2, 0, 36, 0.764) 5%, rgba(84, 10, 70, 0.709) 64%);
+  transition: 0.2s ease;
+  transform: translateX(150%);
+  -webkit-transform: translateX(150%);
+}
+.isMobile #menu #home, .isMobile #menu #about, .isMobile #menu #contact, .isMobile #menu #cases {
+  padding: 8px;
+}
+.isMobile #menu li {
+  text-decoration: none;
+  font-size: 24px;
+  color: #fff;
+  transition: 0.2s;
+  text-transform: uppercase;
+}
+.isMobile #menu.active {
+  transform: translateX(0%);
+  -webkit-transform: translateX(0%);
+  display: flex;
+  width: 100%;
+}
+.isMobile #menu #home.active, .isMobile #menu #about.active, .isMobile #menu #contact.active, .isMobile #menu #cases.active {
+  border-right: 0px solid #fff;
+  border-left: 0px solid #fff;
+}
+.isMobile header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.isMobile header #info2 {
+  display: none;
+}
+.isMobile #main {
+  grid-template: 100%/100%;
+}
+.isMobile .container_about {
+  display: flex;
+  font-size: 10px;
+}
+.isMobile .container_home #baseline {
+  font-size: 15px;
+  line-height: 20px;
+  left: 50%;
+  width: 40%;
+  top: 25%;
+}
+.isMobile .container_cases {
+  grid-template: 20% 20% 50% 10%/100%;
+  height: 100vh;
+  width: 100vw;
+}
+.isMobile .container_cases h1 {
+  display: none;
+}
+.isMobile .container_cases ul {
+  grid-area: 4/1/4/1;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.isMobile .container_cases ul li {
+  margin: 3px;
+}
+.isMobile .container_cases p {
+  grid-area: 3/1/3/1;
+}
+.isMobile .container_contact {
+  display: grid;
+  position: relative;
+  grid-template: 40% 60%/100%;
+}
+.isMobile .container_contact #leftContact {
+  background-color: rgba(255, 255, 255, 0.381);
+  border-radius: 5px;
+  height: 40%;
+}
+.isMobile .container_contact canvas {
+  place-self: center;
+  grid-area: 2/1/2/1;
+  cursor: no-pointer;
+  pointer-events: none;
+}
+.isMobile .container_contact h1 {
+  place-self: center;
+  top: 25%;
+  font-size: 15px;
+}
+.isMobile .container_contact ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=output.css.map */

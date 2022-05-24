@@ -45,11 +45,12 @@ export default function ContactView() {
   mailA.style.filter = "invert(100%)";
   mail.appendChild(mailA);
   const linkedin = document.createElement("li");
-  linkedin.style.filter = "invert(100%)";
+
   linkedin.style.width = "12%";
   linkedin.style.height = "33%";
 
   const linkedinA = document.createElement("a");
+  linkedinA.style.filter = "invert(100%)";
   linkedinA.href = "https://www.linkedin.com/in/lucas-lenoir-darcheville";
   linkedinA.style.background =
     " center/contain url(../../assets/icone/linkedin.png) no-repeat";
@@ -57,10 +58,11 @@ export default function ContactView() {
   linkedin.appendChild(linkedinA);
 
   const github = document.createElement("li");
-  github.style.filter = "invert(100%)";
+
   github.style.width = "12%";
   github.style.height = "33%";
   const githubA = document.createElement("a");
+  githubA.style.filter = "invert(100%)";
   githubA.href = "https://github.com/LucasLenoir";
   githubA.style.background =
     " center/contain url(../../assets/icone/github.png) no-repeat";
@@ -91,9 +93,7 @@ export default function ContactView() {
     const toggle = document.querySelector("#toggle");
     menu.classList.remove("active");
     toggle.classList.remove("active");
-  }else{
+  } else {
     document.querySelector("header").style.display = "grid";
-
   }
-
 }

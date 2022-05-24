@@ -34,18 +34,16 @@ export default function HomeView() {
   const baseline = document.createElement("div");
   baseline.setAttribute("id", "baseline");
   baseline.innerText =
-    '"When fonctionality meets a strong design, you are never far of a sucessful digital experience"';
+    '"When fonctionality meets an expressive design, you are never far off a sucessful digital experience"';
   container.appendChild(baseline);
 
   if (window.innerWidth < 640) {
- 
     document.querySelector("header").style.display = "flex";
     const menu = document.querySelector("#menu");
     const toggle = document.querySelector("#toggle");
     menu.classList.remove("active");
     toggle.classList.remove("active");
-  }else{
+  } else {
     document.querySelector("header").style.display = "grid";
-
   }
 }

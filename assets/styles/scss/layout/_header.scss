@@ -4,6 +4,7 @@ header{
     place-items: center;
     color: var(--white);
    
+   
     
     // transition: 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
     &> a {
@@ -44,7 +45,7 @@ header{
     
   }
 
-  @media screen and (max-width: 1460px){
+  @media screen and (min-width: 904px){
    header{
    grid-template: 10vh 10vh/ 15vw 15vw 15vw 70vw;
     }
@@ -60,6 +61,15 @@ header{
     #logo{
       font-size: 30px;
     }
+    
+  }
+  @media screen and (max-width: 903px) {
+    header{
+
+grid-template: 10vh 10vh/ 35vw 20vw 20vw 25vw;
+    };
+    
+    
   }
  
  
