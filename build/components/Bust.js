@@ -25,7 +25,7 @@ export function Bust() {
   function LoadBustandAnimate() {
     let bust;
     const loader = new GLTFLoader();
-    loader.load("../../assets/img/scene3.glb", function (gltf) {
+    loader.load("/assets/img/scene3.glb", function (gltf) {
       bust = gltf.scene;
       gltf.scene.scale.set(0.2, 0.2, 0.1);
       gltf.scene.translateY(200);
