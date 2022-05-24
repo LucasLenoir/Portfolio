@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import BustScene from "../../assets/img/scene3.glb";
+
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 const main = document.getElementById("main");
