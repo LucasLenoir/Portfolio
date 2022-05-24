@@ -2,6 +2,7 @@ import { Case1 } from "../../components/Case1";
 import { Container } from "../../components/Container";
 import { Contents } from "../../contents/global.contents";
 import { CasesController } from "../../controllers/Cases.controller";
+import memoryC from "/assets/img/memory.png";
 
 export default function MemoryView() {
   const container = document.getElementById("container");
@@ -26,7 +27,7 @@ export default function MemoryView() {
   document.getElementById("memory").classList.add("active");
 
   if (window.innerWidth > 640) {
-    Case1("../../assets/img/memory.png");
+    Case1(memoryC);
   }
 
   CasesController();

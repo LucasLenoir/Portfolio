@@ -2,6 +2,7 @@ import { Case1 } from "../../components/Case1";
 import { Container } from "../../components/Container";
 import { Contents } from "../../contents/global.contents";
 import { CasesController } from "../../controllers/Cases.controller";
+import quizC from "/assets/img/quizz1.png";
 
 export default function QuizzView() {
   const container = document.getElementById("container");
@@ -23,7 +24,7 @@ export default function QuizzView() {
   container.appendChild(txt);
   document.getElementById("quizz").classList.add("active");
   if (window.innerWidth > 640) {
-    Case1("../../assets/img/quizz1.png");
+    Case1(quizC);
   }
 
   CasesController();

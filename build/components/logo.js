@@ -1,5 +1,5 @@
 import * as THREE from "three";
-
+import LogoM from "/assets/img/logo.png";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 let main = document.getElementById("main");
@@ -26,7 +26,6 @@ export function Logo() {
     renderer.setPixelRatio(main.offsetWidth / main.offsetHeight);
     renderer.setSize(main.offsetWidth / 2, height);
     if (main.offsetWidth < 576) {
-   
       renderer.setSize(main.offsetWidth / 2.5, height);
       camera.position.set(0, 0, 5);
     } else if (main.offsetWidth < 921) {
@@ -34,15 +33,13 @@ export function Logo() {
       camera.position.set(0, -130, 4);
     } else {
     }
-     renderer.setSize(main.offsetWidth / 2.5, height);
+    renderer.setSize(main.offsetWidth / 2.5, height);
     camera.position.set(0, 0, 5);
   }
   CHeckWindowAndSetSizeAndRatio();
   function LoadLogoAndAnimate() {
     const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const logoMaterial = new THREE.TextureLoader().load(
-      "../../assets/img/logo.png"
-    );
+    const logoMaterial = new THREE.TextureLoader().load(LogoM);
     const material = new THREE.MeshStandardMaterial({ map: logoMaterial });
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);

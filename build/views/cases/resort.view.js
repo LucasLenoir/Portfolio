@@ -1,6 +1,7 @@
 import { Case1 } from "../../components/Case1";
 import { Contents } from "../../contents/global.contents";
 import { CasesController } from "../../controllers/Cases.controller";
+import resortC from "/assets/img/resort.png";
 
 export default function resortView() {
   const container = document.getElementById("container");
@@ -24,7 +25,7 @@ export default function resortView() {
   container.appendChild(txt);
   document.getElementById("resort").classList.add("active");
   if (window.innerWidth > 640) {
-    Case1("../../assets/img/resort.png");
+    Case1(resortC);
   }
 
   CasesController();

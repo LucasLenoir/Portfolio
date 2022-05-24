@@ -1,3 +1,5 @@
+"use-strict";
+
 import * as THREE from "three";
 
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
@@ -5,6 +7,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 const main = document.getElementById("main");
 const width = document.getElementById("main").offsetWidth;
 const height = document.getElementById("main").offsetHeight;
+const BustScene = require("/assets/img/scene.gltf");
 
 export function Bust() {
   const scene = new THREE.Scene();
@@ -25,7 +28,7 @@ export function Bust() {
   function LoadBustandAnimate() {
     let bust;
     const loader = new GLTFLoader();
-    loader.load("/assets/img/scene3.glb", function (gltf) {
+    loader.load(BustScene, function (gltf) {
       bust = gltf.scene;
       gltf.scene.scale.set(0.2, 0.2, 0.1);
       gltf.scene.translateY(200);
