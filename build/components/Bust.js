@@ -1,5 +1,3 @@
-"use-strict";
-
 import * as THREE from "three";
 
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
@@ -7,12 +5,11 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 const main = document.getElementById("main");
 const width = document.getElementById("main").offsetWidth;
 const height = document.getElementById("main").offsetHeight;
-const BustScene = require("/assets/img/scene.gltf");
 
 export function Bust() {
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(
-    26,
+    2,
     main.offsetWidth / main.offsetHeight,
     0.1,
     1000
@@ -28,7 +25,7 @@ export function Bust() {
   function LoadBustandAnimate() {
     let bust;
     const loader = new GLTFLoader();
-    loader.load(BustScene, function (gltf) {
+    loader.load("../../assets/img/scene3.glb", function (gltf) {
       bust = gltf.scene;
       gltf.scene.scale.set(0.2, 0.2, 0.1);
       gltf.scene.translateY(200);
