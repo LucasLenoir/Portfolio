@@ -4,9 +4,9 @@ import { Logo } from "../components/logo";
 import { Contents } from "../contents/global.contents";
 import { mainTransition } from "../animations/main.transition";
 import { CreateMenuSvg } from "../svg/menu.svg";
-import LinkeinImg from "../../assets/icone/linkedin.png";
-import MailImg from "../../assets/icone/mail.png";
-import GithubImg from "../../assets/icone/github.png";
+import LinkeinImg from "/assets/icone/linkedin.png";
+import MailImg from "/assets/icone/mail.png";
+import GithubImg from "/assets/icone/github.png";
 
 export default function ContactView() {
   const container = Container.CreateContainer();
@@ -43,7 +43,7 @@ export default function ContactView() {
 
   const mailA = document.createElement("a");
   mailA.href = "mailto: lucas.lenoirdarcheville@gmail.com";
-  mailA.style.background = `center/contain ${MailImg} no-repeat`;
+  mailA.style.background = `center/contain url('${MailImg}') no-repeat`;
   mailA.style.filter = "invert(100%)";
   mail.appendChild(mailA);
   const linkedin = document.createElement("li");
@@ -54,7 +54,7 @@ export default function ContactView() {
   const linkedinA = document.createElement("a");
   linkedinA.style.filter = "invert(100%)";
   linkedinA.href = "https://www.linkedin.com/in/lucas-lenoir-darcheville";
-  linkedinA.style.background = `center/contain ${LinkeinImg} no-repeat`;
+  linkedinA.style.background = `center/contain url('${LinkeinImg}') no-repeat`;
   linkedinA.setAttribute("target", "_blank");
   linkedin.appendChild(linkedinA);
 
@@ -65,7 +65,7 @@ export default function ContactView() {
   const githubA = document.createElement("a");
   githubA.style.filter = "invert(100%)";
   githubA.href = "https://github.com/LucasLenoir";
-  githubA.style.background = ` center/contain ${GithubImg} no-repeat`;
+  githubA.style.background = ` center/contain url('${GithubImg}') no-repeat`;
   githubA.setAttribute("target", "_blank");
   github.appendChild(githubA);
 
