@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --config configs/vite.config.js",
     "build": "vite build --config configs/vite.config.js",
     "preview": "vite preview",
     "sass": "sass --watch ./assets/styles/scss/input.scss:./assets/styles/css/output.css"
