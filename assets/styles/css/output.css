@@ -81,6 +81,12 @@ header {
   place-items: center;
   color: var(--white);
 }
+header #social li a span {
+  font-family: ak;
+}
+header #social li a strong {
+  letter-spacing: 2px;
+}
 header > a {
   margin-left: 10px;
   grid-area: 1/1/2/5;
@@ -323,13 +329,12 @@ foreignObject:hover {
   place-self: center;
 }
 .container_contact #leftContact {
-  background-color: rgba(255, 255, 255, 0.381);
+  background-color: rgba(130, 129, 129, 0.701);
   border-radius: 5px;
 }
 .container_contact h1 {
   padding: 20px;
   text-transform: uppercase;
-  margin-bottom: 10%;
   line-height: 43px;
 }
 .container_contact ul {
@@ -440,7 +445,7 @@ foreignObject:hover {
   top: 5px;
   width: 60px;
   height: 60px;
-  background: url(./assets/icone/menu.png);
+  background: url("/assets/icone/menu.png");
   background-repeat: no-repeat;
   background-size: 30px;
   background-position: center;
@@ -448,7 +453,7 @@ foreignObject:hover {
   z-index: 9990;
 }
 .isMobile #toggle.active {
-  background: url(./assets/icone/close.png);
+  background: url("/assets/icone/close.png");
   background-repeat: no-repeat;
   background-size: 25px;
   background-position: center;

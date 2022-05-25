@@ -14,7 +14,7 @@ export default function QuizzView() {
     img.style.width = "100%";
     container.appendChild(img);
     img.style.background =
-      " center/ contain url(../../assets/img/quizz.png) no-repeat";
+    `center/ contain url('${quizC}') no-repeat`;
   }
 
   const txt = document.createElement("div");

@@ -13,8 +13,7 @@ export default function resortView() {
     img.style.height = "100%";
     img.style.width = "100%";
     container.appendChild(img);
-    img.style.background =
-      " center/ contain url(../../assets/img/resort.png) no-repeat";
+    img.style.background = `center/ contain url('${resortC}') no-repeat`;
   }
 
   const txt = document.createElement("div");
