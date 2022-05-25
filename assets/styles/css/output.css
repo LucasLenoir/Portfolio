@@ -461,6 +461,7 @@ foreignObject:hover {
 .isMobile #menu {
   position: relative;
   display: none;
+  font-family: Druk;
   flex-direction: column;
   list-style: none;
   z-index: 10;
@@ -480,6 +481,7 @@ foreignObject:hover {
   padding: 8px;
 }
 .isMobile #menu li {
+  font-family: Druk;
   text-decoration: none;
   font-size: 24px;
   color: #fff;

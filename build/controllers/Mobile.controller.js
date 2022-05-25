@@ -1,5 +1,7 @@
 import { CreateMenuSvg } from "../svg/menu.svg";
 import { MenuController } from "./Menu.controller";
+const width = window.innerWidth;
+const height = window.innerHeight;
 
 export function checkIfMobileAndApllyStyle() {
   if (window.innerWidth < 640) {
@@ -63,35 +65,40 @@ export function checkIfIsMobileAndActivatesMenu() {
 }
 
 export function isMobile() {
-  window.addEventListener("resize", () => {
-    if (window.innerWidth < 640) {
-      if (!document.querySelector("body").classList.contains("isMobile")) {
-        document.querySelector("body").classList.add("isMobile");
-        checkIfMobileAndApllyStyle();
-        checkIfIsMobileAndActivatesMenu();
-      }
-    } else if (window.innerWidth > 640) {
-      if (document.querySelector("body").classList.contains("isMobile")) {
-        document.querySelector("body").classList.remove("isMobile");
+  window.addEventListener("resize", (e) => {
+    if (
+      Math.abs(window.innerWidth - width) > 100 ||
+      Math.abs(window.innerHeight - height) > 100
+    ) {
+      if (window.innerWidth < 640) {
+        if (!document.querySelector("body").classList.contains("isMobile")) {
+          document.querySelector("body").classList.add("isMobile");
+          checkIfMobileAndApllyStyle();
+          checkIfIsMobileAndActivatesMenu();
+        }
+      } else if (window.innerWidth > 640) {
+        if (document.querySelector("body").classList.contains("isMobile")) {
+          document.querySelector("body").classList.remove("isMobile");
 
-        document.getElementById("home").remove();
-        document.getElementById("about").remove();
-        document.getElementById("cases").remove();
-        document.getElementById("contact").remove();
-        document.getElementById("toggle")?.remove();
-        document.getElementById("menu")?.remove();
-        document.getElementById("navBurger")?.remove();
-        document.getElementById("info2").style.display = "block";
-        document.getElementById("social").style.display = "block";
+          document.getElementById("home").remove();
+          document.getElementById("about").remove();
+          document.getElementById("cases").remove();
+          document.getElementById("contact").remove();
+          document.getElementById("toggle")?.remove();
+          document.getElementById("menu")?.remove();
+          document.getElementById("navBurger")?.remove();
+          document.getElementById("info2").style.display = "block";
+          document.getElementById("social").style.display = "block";
+        }
       }
-    }
-    if (!document.getElementById("nav")) {
-      CreateMenuSvg();
-      MenuController();
-    } else {
-      document.querySelectorAll("animate").forEach((el) => {
-        el.beginElement();
-      });
+      if (!document.getElementById("nav")) {
+        CreateMenuSvg();
+        MenuController();
+      } else {
+        document.querySelectorAll("animate").forEach((el) => {
+          el.beginElement();
+        });
+      }
     }
   });
 }
