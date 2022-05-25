@@ -5,12 +5,12 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 const main = document.getElementById("main");
 const width = document.getElementById("main").offsetWidth;
 const height = document.getElementById("main").offsetHeight;
-import BustScene from "../../assets/img/scene.gltf";
+import BustScene from "../../assets/img/scene3.glb";
 
 export function Bust() {
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(
-    2,
+    25,
     main.offsetWidth / main.offsetHeight,
     0.1,
     1000
@@ -34,7 +34,7 @@ export function Bust() {
       bust.position.y = 0;
       scene.add(bust);
       animate();
-      // bust.position.setX(0);
+      //   bust.position.setX(0);
     });
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.update();
