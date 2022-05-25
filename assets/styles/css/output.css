@@ -529,6 +529,9 @@ foreignObject:hover {
 .isMobile .container_cases h1 {
   display: none;
 }
+.isMobile .container_cases #github {
+  display: none;
+}
 .isMobile .container_cases ul {
   grid-area: 4/1/4/1;
   font-size: 14px;

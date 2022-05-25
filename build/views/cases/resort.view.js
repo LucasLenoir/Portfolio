@@ -2,6 +2,7 @@ import { Case1 } from "../../components/Case1";
 import { Contents } from "../../contents/global.contents";
 import { CasesController } from "../../controllers/Cases.controller";
 import resortC from "/assets/img/resort.png";
+import githubPic from "/assets/icone/github.png";
 
 export default function resortView() {
   const container = document.getElementById("container");
@@ -23,6 +24,24 @@ export default function resortView() {
   container.innerHTML += `<p>${Contents.resort.p}</p>`;
   container.appendChild(txt);
   document.getElementById("resort").classList.add("active");
+
+  let github = document.createElement("div");
+  github.style.background = ` center/ contain url('${githubPic}') no-repeat`;
+  github.style.width = "50px";
+  github.style.height = "50px";
+  github.style.filter = "invert(100%)";
+
+  let githubA = document.createElement("a");
+  githubA.style.display = "inline-block";
+  githubA.setAttribute("target", "_blank");
+
+  githubA.href = "https://github.com/LucasLenoir/ProjetDepartement";
+  githubA.style.width = "100%";
+
+  githubA.style.height = "100%";
+
+  github.appendChild(githubA);
+  container.appendChild(github);
   if (window.innerWidth > 640) {
     Case1(resortC);
   }
