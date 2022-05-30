@@ -1,9 +1,10 @@
 import { CreateMenuSvg } from "../svg/menu.svg";
 import { MenuController } from "./Menu.controller";
-const width = window.innerWidth;
-const height = window.innerHeight;
+let width = window.innerWidth;
+let height = window.innerHeight;
 
 export function checkIfMobileAndApllyStyle() {
+  console.log("checkIfMobileAndApllyStyle");
   if (window.innerWidth < 640) {
     if (document.getElementById("anim")) {
       document.getElementById("anim").remove();
@@ -47,6 +48,7 @@ export function checkIfMobileAndApllyStyle() {
   }
 }
 export function checkIfIsMobileAndActivatesMenu() {
+  console.log("checkIfIsMobileAndActivatesMenu");
   if (document.querySelector("body").classList.contains("isMobile")) {
     const toggle = document.querySelector("#toggle");
     const menu = document.querySelector("#menu");
@@ -66,18 +68,28 @@ export function checkIfIsMobileAndActivatesMenu() {
 
 export function isMobile() {
   window.addEventListener("resize", (e) => {
+    e.stopImmediatePropagation();
+    console.log(Math.abs(window.innerWidth - width));
+    console.log("resized");
     if (
-      Math.abs(window.innerWidth - width) > 100 ||
-      Math.abs(window.innerHeight - height) > 100
+    
+      Math.abs(window.innerWidth - width) > 50 ||
+      Math.abs(window.innerHeight - height) > 50
     ) {
+      width = window.innerWidth;
+      height = window.innerHeight;
       if (window.innerWidth < 640) {
+        console.log("if<640");
         if (!document.querySelector("body").classList.contains("isMobile")) {
+          console.log("!isMobile");
           document.querySelector("body").classList.add("isMobile");
           checkIfMobileAndApllyStyle();
           checkIfIsMobileAndActivatesMenu();
         }
       } else if (window.innerWidth > 640) {
+        console.log("if>640");
         if (document.querySelector("body").classList.contains("isMobile")) {
+          console.log("isMobile");
           document.querySelector("body").classList.remove("isMobile");
 
           document.getElementById("home").remove();
@@ -91,10 +103,12 @@ export function isMobile() {
           document.getElementById("social").style.display = "block";
         }
       }
-      if (!document.getElementById("nav")) {
+      if (!document.getElementById("nav") && window.innerWidth > 640) {
+        console.log("if !nav && >640");
         CreateMenuSvg();
         MenuController();
       } else {
+        console.log("else nav && <640");
         document.querySelectorAll("animate").forEach((el) => {
           el.beginElement();
         });
