@@ -34,7 +34,7 @@ export default function HomeView() {
   const baseline = document.createElement("div");
   baseline.setAttribute("id", "baseline");
   baseline.innerText =
-    '"When fonctionality meets an expressive design, you are never far off a sucessful digital experience"';
+    '"When fonctionality meets an expressive design, you are never far off from a sucessful digital experience"';
   container.appendChild(baseline);
 
   if (window.innerWidth < 640) {
