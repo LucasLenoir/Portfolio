@@ -203,11 +203,6 @@ body {
   font-weight: 50px;
 }
 
-#MenuActive {
-  backdrop-filter: blur(5px);
-  background-blend-mode: overlay;
-}
-
 h1, h2, p {
   text-shadow: 2px 2px 2px black;
 }
@@ -440,7 +435,7 @@ foreignObject:hover {
   width: 100%;
   height: 100%;
   color: #fff;
-  font-family: druk;
+  font-family: lemonlight;
   line-height: 2rem;
 }
 .container_cases canvas {
@@ -453,7 +448,7 @@ foreignObject:hover {
   justify-self: flex-start;
 }
 .container_cases h1 {
-  font-family: lemonmilk;
+  font-family: lemonlight;
   position: absolute;
   top: 10%;
   left: 0%;
@@ -469,6 +464,8 @@ foreignObject:hover {
   column-gap: 2%;
 }
 .container_cases ul li {
+  font-family: lemonlight;
+  font-weight: 800;
   cursor: pointer;
 }
 .container_cases p {

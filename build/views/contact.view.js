@@ -74,21 +74,6 @@ export default function ContactView() {
   github.appendChild(githubA);
 
   socials.append(mail, linkedin, github);
-
-  // const calltoAction = document.createElement("div");
-  // calltoAction.setAttribute("id", "calltoAction");
-  // calltoAction.style.filter = "invert(100%)";
-  // calltoAction.style.width = " 100%";
-  // calltoAction.style.height = "100%";
-  // const calltoActionA = document.createElement("a");
-  // calltoActionA.href = "#";
-  // calltoActionA.style.backgroundImage =
-  //   "center/contain url(../../assets/icone/coffee.png) no-repeat";
-  //   calltoActionA.style.background = "#000"
-  // calltoActionA.setAttribute("target", "_blank");
-  // calltoAction.appendChild(calltoActionA);
-  // calltoAction.innerHTML += "Fancy buying me a Coffee ?";
-
   leftcontact.appendChild(socials);
 
   if (window.innerWidth < 640) {

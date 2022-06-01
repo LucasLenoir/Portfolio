@@ -17,7 +17,7 @@
     width: 100%;
     height: 100%;
     color:#fff;
-    font-family: druk;
+    font-family: lemonlight;
     
     
    
@@ -37,7 +37,7 @@
         justify-self: flex-start;
     }
     & h1{
-        font-family: lemonmilk;
+        font-family: lemonlight;
         position: absolute;
         top: 10%;
         left: 0%;
@@ -57,6 +57,8 @@
             column-gap: 2%; 
             
             & li{
+                font-family: lemonlight;
+                font-weight: 800;
       cursor: pointer;}
     }
   
