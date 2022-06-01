@@ -26,10 +26,6 @@
   font-family: lemonlight;
   src: url("/assets/fonts/LEMONMILK-light.otf");
 }
-@font-face {
-  font-family: wave;
-  src: url("/assets/fonts/Demo_Fonts/waverly-bold.otf");
-}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -243,7 +239,7 @@ h1, h2, p {
   font-size: 2vw;
   text-shadow: 2px 2px 2px black;
 }
-.container_home #baseline1 {
+.container_home #baseline #baseline1 {
   font-family: lemonlight;
   grid-area: 1/1/1/1;
 }
