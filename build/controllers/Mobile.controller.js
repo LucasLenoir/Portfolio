@@ -1,14 +1,13 @@
 import { MenuController } from "./Menu.controller";
+import {CreatePageBtn} from "../svg/menu.svg"
 let width = window.innerWidth;
 let height = window.innerHeight;
 
 export function checkIfMobileAndApllyStyle() {
-
   if (window.innerWidth < 640) {
     if (document.getElementById("nav")) {
-      
       document.getElementById("nav").remove();
-      document.getElementById("info2").style.display = "none";
+
       document.getElementById("social").style.display = "none";
     }
 
@@ -47,7 +46,6 @@ export function checkIfMobileAndApllyStyle() {
   }
 }
 export function checkIfIsMobileAndActivatesMenu() {
- 
   if (document.querySelector("body").classList.contains("isMobile")) {
     const toggle = document.querySelector("#toggle");
     const menu = document.querySelector("#menu");
@@ -68,7 +66,7 @@ export function checkIfIsMobileAndActivatesMenu() {
 export function isMobile() {
   window.addEventListener("resize", (e) => {
     e.stopImmediatePropagation();
-   
+
     if (
       Math.abs(window.innerWidth - width) > 50 ||
       Math.abs(window.innerHeight - height) > 50
@@ -76,17 +74,13 @@ export function isMobile() {
       width = window.innerWidth;
       height = window.innerHeight;
       if (window.innerWidth < 640) {
-       
         if (!document.querySelector("body").classList.contains("isMobile")) {
-          
           document.querySelector("body").classList.add("isMobile");
           checkIfMobileAndApllyStyle();
           checkIfIsMobileAndActivatesMenu();
         }
       } else if (window.innerWidth > 640) {
-        
         if (document.querySelector("body").classList.contains("isMobile")) {
-         
           document.querySelector("body").classList.remove("isMobile");
 
           document.getElementById("home").remove();
@@ -96,16 +90,14 @@ export function isMobile() {
           document.getElementById("toggle")?.remove();
           document.getElementById("menu")?.remove();
           document.getElementById("navBurger")?.remove();
-          document.getElementById("info2").style.display = "block";
+
           document.getElementById("social").style.display = "block";
         }
       }
       if (!document.getElementById("nav") && window.innerWidth > 640) {
-       
         CreatePageBtn();
         MenuController();
       } else {
-       
         document.querySelectorAll("animate").forEach((el) => {
           el.beginElement();
         });
