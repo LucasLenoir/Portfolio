@@ -17,6 +17,8 @@ export default function ContactView() {
   });
   if (window.innerWidth > 640) {
     Logo();
+    mainTransition(canvas);
+    container.appendChild(canvas);
   }
 
   container.className = "container_contact";
@@ -33,8 +35,8 @@ export default function ContactView() {
   const canvas = document.querySelector("#main canvas");
   main.className = "";
   main.className = "main_contact";
-  mainTransition(container, canvas);
-  container.appendChild(canvas);
+  mainTransition(container);
+
   const socials = document.createElement("ul");
   socials.style.width = "100%";
   socials.style.height = "100%";
