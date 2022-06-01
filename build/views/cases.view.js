@@ -1,15 +1,16 @@
-import { backgroundMenu, greyMenu } from "../animations/background.menu";
+// import { backgroundMenu, greyMenu } from "../animations/background.menu";
 import { Container } from "../components/Container";
 import { Contents } from "../contents/global.contents";
 import { mainTransition } from "../animations/main.transition";
 import { CasesController } from "../controllers/Cases.controller";
 import MemoryView from "./cases/memory.view";
 import { Logo } from "../components/logo";
+import QuizzView from "./cases/quizz.view";
 
 export default function CasesView() {
   
   const container = Container.CreateContainer();
-  backgroundMenu();
+  // backgroundMenu();
   document.querySelectorAll("animate").forEach((el) => {
     el.beginElement();
   });
@@ -29,7 +30,7 @@ export default function CasesView() {
   
   mainTransition(container);
   CasesController();
-  MemoryView();
+  QuizzView();
 
   if (window.innerWidth < 640) {
     document.querySelector("header").style.display = "none";
@@ -37,9 +38,6 @@ export default function CasesView() {
     const toggle = document.querySelector("#toggle");
     menu.classList.remove("active");
     toggle.classList.remove("active");
-  }else{
-    document.querySelector("header").style.display = "grid";
-
   }
 }
 

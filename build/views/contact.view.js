@@ -1,9 +1,9 @@
-import { backgroundMenu } from "../animations/background.menu";
+// import { backgroundMenu } from "../animations/background.menu";
 import { Container } from "../components/Container";
 import { Logo } from "../components/logo";
 import { Contents } from "../contents/global.contents";
 import { mainTransition } from "../animations/main.transition";
-import { CreateMenuSvg } from "../svg/menu.svg";
+
 import LinkeinImg from "/assets/icone/linkedin.png";
 import MailImg from "/assets/icone/mail.png";
 import GithubImg from "/assets/icone/github.png";
@@ -11,7 +11,7 @@ import GithubImg from "/assets/icone/github.png";
 export default function ContactView() {
   const container = Container.CreateContainer();
 
-  backgroundMenu();
+  // backgroundMenu();
   document.querySelectorAll("animate").forEach((el) => {
     el.beginElement();
   });
@@ -93,7 +93,5 @@ export default function ContactView() {
     const toggle = document.querySelector("#toggle");
     menu.classList.remove("active");
     toggle.classList.remove("active");
-  } else {
-    document.querySelector("header").style.display = "grid";
-  }
+  } 
 }

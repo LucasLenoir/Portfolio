@@ -7,25 +7,64 @@
     opacity:0;
     
     #baseline{
-        width: 30%;
-        height: 30%;
+        padding: 5px;
+        line-height: 35px;
+        place-items: center;
+        align-items: center;
+        display: grid;
+      grid-template: 40% 60% / 100%;
+        background-color: rgba(0, 0, 0, 0.222);
+        border-radius: 5px;
+        width: 90%;
+        height: 150px;
         font-family: ak;
         font-size: 20px;
         position: absolute;
-        left: 59%;
-        top: 50%;
+        left: 0%;
+        top: 52%;
+        font-size: 2vw;
+        text-shadow: 2px 2px 2px black;
+
+       
+    }
+    #baseline1{
+        font-family: lemonlight;
+        grid-area: 1/1/1/1;
+    }
+    #digital{
+        font-family: LEMONMILK;
+        grid-area: 2/1/2/1;
+        font-size: 5vw;
     }
     
-    
     & p{ 
+        grid-area: 1/1/1/1;
+        font-family: lemonlight;
      opacity: 0;
+    //  position: absolute;
+    
+     font-size: 4vw;
+    }
+    & #city{
+        display: grid;
+        grid-template: 80% 20% / 100%;
+        flex-direction: row;
+        font-family: lemonlight;
+        opacity: 0;
      position: absolute;
-     left: 50%;
-     top: 15%;
-     font-size: 12vw;
+     height: fit-content;
+     left: 85%;
+     top: 5%;
+     font-size: 1vw;
+     justify-content: center;
+     align-items: center;
+    }
+    & #citytxt{
+        grid-area: 2/1/2/1;
+        place-self: center;
     }
 
     #month{
-        font-size: 6vw;
+        font-size: 3vw;
     }
 }

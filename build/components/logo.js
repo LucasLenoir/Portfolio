@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import LogoM from "/assets/img/logo.png";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+// import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+// import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 let main = document.getElementById("main");
 let width = document.getElementById("main").offsetWidth;
 let Height = document.getElementById("main").offsetHeight;
@@ -23,6 +23,7 @@ export function Logo() {
   main.appendChild(renderer.domElement);
   function CHeckWindowAndSetSizeAndRatio() {
     const canvas = document.querySelector("canvas");
+    canvas.setAttribute("id", "canvas");
     renderer.setPixelRatio(main.offsetWidth / main.offsetHeight);
     renderer.setSize(main.offsetWidth / 2, height);
     if (main.offsetWidth < 576) {
@@ -44,14 +45,14 @@ export function Logo() {
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
 
-    const controls = new OrbitControls(camera, renderer.domElement);
-    controls.update();
+    // const controls = new OrbitControls(camera, renderer.domElement);
+    // controls.update();
     const light = new THREE.DirectionalLight(0xffffff, 1);
     light.position.x = -12;
     light.position.y = -3;
     light.position.z = 20;
     scene.add(light);
-    const lighthelper = new THREE.DirectionalLightHelper(light, 5);
+    // const lighthelper = new THREE.DirectionalLightHelper(light, 5);
     // scene.add(lighthelper);
     const clock = new THREE.Clock();
     function animate() {
@@ -61,7 +62,7 @@ export function Logo() {
       cube.rotation.y = 0.2 * elapsedTime;
       cube.rotation.x = 0.2 * elapsedTime;
 
-      controls.update();
+      // controls.update();
       renderer.render(scene, camera);
       scene.add(camera);
     }

@@ -13,6 +13,7 @@ foreignObject{
 }
 
 #about, #home, #cases, #contact{
+    font-family: lemonlight;
     z-index: 8000;
  position: relative;
     cursor: pointer;
@@ -26,14 +27,14 @@ foreignObject{
 }
 #home.active, #about.active, #contact.active, #cases.active{
     
-         border-right: 2px solid #fff;
-         border-left: 2px solid #fff;
+        //  border-right: 2px solid #fff;
+         border-left: 3px solid #fff;
          // border-top: 10px solid #fff;
         // border-top: 10px solid #fff;
         // border-top: 5px groove #fff;
         // border-left: 5px groove #fff;
         
-        padding-top: 5px;
+        padding-top: 4px;
         
        
     

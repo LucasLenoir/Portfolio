@@ -2,7 +2,7 @@
 
 import "./assets/styles/css/output.css";
 import { MenuController } from "./build/controllers/Menu.controller.js";
-import { CreateMenuSvg } from "./build/svg/menu.svg.js";
+import { CreatePageBtn } from "./build/svg/menu.svg.js";
 import HomeView from "./build/views/home.view.js";
 import AboutView from "./build/views/about.view.js";
 import CasesView from "./build/views/cases.view.js";
@@ -15,7 +15,7 @@ import {
 } from "./build/controllers/Mobile.controller";
 
 function homeControllers() {
-  CreateMenuSvg();
+  CreatePageBtn();
 
   MenuController();
 }

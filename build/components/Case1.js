@@ -1,6 +1,6 @@
 import * as THREE from "three";
 
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+// import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { Container } from "./Container";
 let main = document.getElementById("main");
@@ -45,8 +45,8 @@ export function Case1(bg) {
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
 
-    const controls = new OrbitControls(camera, renderer.domElement);
-    controls.update();
+    // const controls = new OrbitControls(camera, renderer.domElement);
+    // controls.update();
     const light = new THREE.DirectionalLight(0xffffff, 1);
     light.position.x = -12;
     light.position.y = -3;
@@ -62,7 +62,7 @@ export function Case1(bg) {
       cube.rotation.y = 0.2 * elapsedTime;
       cube.rotation.x = 0.2 * elapsedTime;
 
-      controls.update();
+      // controls.update();
       renderer.render(scene, camera);
       scene.add(camera);
     }

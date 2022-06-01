@@ -1,6 +1,6 @@
 import * as THREE from "three";
 
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+// import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 const main = document.getElementById("main");
 const width = document.getElementById("main").offsetWidth;
@@ -36,8 +36,8 @@ export function Bust() {
       animate();
       //   bust.position.setX(0);
     });
-    const controls = new OrbitControls(camera, renderer.domElement);
-    controls.update();
+    // const controls = new OrbitControls(camera, renderer.domElement);
+    // controls.update();
     // scene.background = new THREE.Color("#fffffff");
     const light = new THREE.HemisphereLight(0xffffff, 0x000000, 4);
     const gridHelper = new THREE.GridHelper(2, 9);
@@ -46,9 +46,10 @@ export function Bust() {
     function animate() {
       requestAnimationFrame(animate);
       bust.rotation.z += 0.01;
-      controls.update();
+      // controls.update();
       renderer.render(scene, camera);
       scene.add(camera);
+      camera.lookAt(0, 0);
     }
   }
   function CHeckWindowAndSetSizeAndRatio() {

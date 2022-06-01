@@ -7,11 +7,12 @@ body{
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template: 80% 20%/100%
+    grid-template: 80% 19%/100%;
+    justify-items: center;
 }
 
 #questionMark{
-    font-family: ak;
+    font-family: lemonlight;
     font-weight: 50px;
 }
 #MenuActive{

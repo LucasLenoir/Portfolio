@@ -5,15 +5,31 @@ $road:"/assets/fonts";
     src: url("#{$road}/Vogue.ttf");
   }
   
-  @font-face {
+@font-face {
       font-family: Druk;
       src: url("#{$road}/Druk.ttf");
     }
-    @font-face {
+@font-face {
       font-family: Ak;
       src: url("#{$road}/Akzidenz.ttf");
     }
+@font-face {
+      font-family: horizon;
+      src: url("#{$road}/HorizonFont/Horizon.otf");
+    }
+@font-face {
+      font-family: Sulcant;
+      src: url("#{$road}/Sulcant.ttf");
+    }
     @font-face {
-      font-family: Mael;
-      src: url("#{$road}/MaelstromBold.ttf");
+      font-family: LemonMilk;
+      src: url("#{$road}/LEMONMILK-Bold.otf");
+    }
+    @font-face {
+      font-family: lemonlight;
+      src: url("#{$road}/LEMONMILK-light.otf");
+    }
+    @font-face {
+      font-family: wave;
+      src: url("#{$road}/Demo_Fonts/waverly-bold.otf");
     }
