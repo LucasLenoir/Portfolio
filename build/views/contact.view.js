@@ -17,6 +17,8 @@ export default function ContactView() {
   });
   if (window.innerWidth > 640) {
     Logo();
+   
+    const canvas = document.querySelector("#main canvas");
     mainTransition(canvas);
     container.appendChild(canvas);
   }
@@ -32,7 +34,6 @@ export default function ContactView() {
   leftcontact.setAttribute("id", "leftContact");
 
   const main = document.getElementById("main");
-  const canvas = document.querySelector("#main canvas");
   main.className = "";
   main.className = "main_contact";
   mainTransition(container);
