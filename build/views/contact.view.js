@@ -15,8 +15,9 @@ export default function ContactView() {
   document.querySelectorAll("animate").forEach((el) => {
     el.beginElement();
   });
-
-  Logo();
+  if (window.innerWidth > 640) {
+    Logo();
+  }
 
   container.className = "container_contact";
   home.className = "";
@@ -93,5 +94,5 @@ export default function ContactView() {
     const toggle = document.querySelector("#toggle");
     menu.classList.remove("active");
     toggle.classList.remove("active");
-  } 
+  }
 }
