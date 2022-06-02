@@ -224,7 +224,7 @@ h1, h2, p {
   grid-template: 40% 60%/100%;
   background-color: rgba(0, 0, 0, 0.222);
   border-radius: 5px;
-  width: 90%;
+  width: fit-content;
   height: 150px;
   font-family: ak;
   font-size: 20px;
@@ -282,8 +282,8 @@ h1, h2, p {
   position: relative;
   background-color: rgba(0, 0, 0, 0.222);
   border-radius: 5px;
-  width: 100%;
-  height: 60%;
+  width: fit-content;
+  height: fit-content;
   color: #fff;
   font-family: lemonlight;
   display: flex;
@@ -366,7 +366,8 @@ foreignObject:hover {
   opacity: 0;
 }
 .container_contact #leftContact {
-  width: 100%;
+  width: fit-content;
+  height: fit-content;
   place-self: center;
   font-family: lemonlight;
   font-weight: 700;
