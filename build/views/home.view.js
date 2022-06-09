@@ -34,7 +34,7 @@ export default function HomeView() {
   if (window.innerWidth < 640) {
     city.style.width = "80px";
     city.style.height = "80px";
-    city.style.right = "98%";
+    city.style.left = "2%";
   }
   const day = document.getElementById("day");
   const month = document.getElementById("month");
