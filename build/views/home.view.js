@@ -31,6 +31,10 @@ export default function HomeView() {
 
   city.setAttribute("id", "city");
   city.style.background = `center/cover url(${logo3}) no-repeat`;
+  if (window.innerWidth < 640) {
+    city.style.width = "80px";
+    city.style.height = "80px";
+  }
   const day = document.getElementById("day");
   const month = document.getElementById("month");
   mainTransition(container, p, city);
