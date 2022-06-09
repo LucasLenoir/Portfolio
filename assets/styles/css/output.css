@@ -216,10 +216,9 @@ h1, h2, p {
   opacity: 0;
 }
 .container_home #city {
-  width: 100px;
-  height: 100px;
+  width: 180px;
+  height: 180px;
   z-index: 5000;
-  background: center/contain url("./assets/img/logo3.png") no-repeat;
   position: absolute;
   top: 2%;
   right: 2%;

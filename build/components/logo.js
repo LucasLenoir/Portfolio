@@ -1,6 +1,6 @@
 import * as THREE from "three";
-import LogoM from "/assets/img/logo.png";
-import logo from "/assets/img/logo3.png";
+
+import logo from "/assets/img/loggo1.png";
 // import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 // import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 let main = document.getElementById("main");

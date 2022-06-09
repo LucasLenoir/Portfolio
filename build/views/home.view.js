@@ -1,6 +1,7 @@
 import { Container } from "../components/Container";
 // import { GetDate } from "../components/date";
 import { mainTransition } from "../animations/main.transition";
+import logo3 from "../../assets/img/logokaki.png";
 
 // import { greyMenu } from "../animations/background.menu";
 
@@ -27,10 +28,9 @@ export default function HomeView() {
   // const date = (document.main.className = "");
   const p = document.querySelector(".container_home p");
   const city = document.createElement("div");
+
   city.setAttribute("id", "city");
-
- 
-
+  city.style.background = `center/cover url(${logo3}) no-repeat`;
   const day = document.getElementById("day");
   const month = document.getElementById("month");
   mainTransition(container, p, city);
