@@ -223,6 +223,13 @@ h1, h2, p {
   top: 2%;
   right: 2%;
 }
+@media screen and (max-width: 640) {
+  .container_home #city {
+    right: 98%;
+    width: 80px;
+    height: 80px;
+  }
+}
 .container_home #baseline {
   padding: 5px;
   line-height: 35px;

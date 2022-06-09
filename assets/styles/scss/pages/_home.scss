@@ -14,6 +14,15 @@
         top: 2%;
         right: 2%
      }
+
+    @media screen and (max-width: 640) {
+        #city{
+            right: 98%;
+            width: 80px;
+            height: 80px;
+        }
+        
+    }
     
     #baseline{
         padding: 5px;

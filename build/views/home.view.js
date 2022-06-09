@@ -1,7 +1,7 @@
 import { Container } from "../components/Container";
 // import { GetDate } from "../components/date";
 import { mainTransition } from "../animations/main.transition";
-import logo3 from "../../assets/img/logokaki.png";
+import logo3 from "../../assets/img/loggo1.png";
 
 // import { greyMenu } from "../animations/background.menu";
 
