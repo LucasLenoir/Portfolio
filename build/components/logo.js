@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import LogoM from "/assets/img/logo.png";
+import logo from "/assets/img/logo3.png";
 // import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 // import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 let main = document.getElementById("main");
@@ -40,7 +41,7 @@ export function Logo() {
   CHeckWindowAndSetSizeAndRatio();
   function LoadLogoAndAnimate() {
     const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const logoMaterial = new THREE.TextureLoader().load(LogoM);
+    const logoMaterial = new THREE.TextureLoader().load(logo);
     const material = new THREE.MeshStandardMaterial({ map: logoMaterial });
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);

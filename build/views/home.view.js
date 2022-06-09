@@ -29,10 +29,7 @@ export default function HomeView() {
   const city = document.createElement("div");
   city.setAttribute("id", "city");
 
-  const citytxt = document.createElement("div");
-  citytxt.setAttribute("id", "citytxt");
-  citytxt.innerText = "Lucas Lenoir.CO";
-  city.appendChild(citytxt);
+ 
 
   const day = document.getElementById("day");
   const month = document.getElementById("month");
