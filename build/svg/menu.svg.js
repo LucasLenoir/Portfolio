@@ -9,10 +9,11 @@ export function CreatePageBtn() {
     let height = svg.clientHeight;
 
     svg.innerHTML += `
+   
     
     <g>
     <foreignObject id="homeObj" x="0%" y="${10}%" width="300px" height='60px' stroke="#fff" >
-    <button id="home">home</button>
+    <button id="home">${window.innerWidth}</button>
     
     </foreignObject>
     

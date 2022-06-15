@@ -4,8 +4,16 @@ import { Container } from "../components/Container";
 import { Contents } from "../contents/global.contents";
 import "../components/Bust";
 import { Bust } from "../components/Bust";
+import {
+  checkIfIsMobileAndActivatesMenu,
+  checkIfMobileAndApllyStyle,
+  isMobile,
+} from "../controllers/Mobile.controller";
 
 export default function AboutView() {
+  checkIfMobileAndApllyStyle();
+  checkIfIsMobileAndActivatesMenu();
+  isMobile();
   const container = Container.CreateContainer();
   // backgroundMenu();
   document.querySelectorAll("animate").forEach((el) => {
