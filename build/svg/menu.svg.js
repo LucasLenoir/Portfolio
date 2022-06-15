@@ -1,5 +1,5 @@
 export function CreatePageBtn() {
-  if (window.innerWidth > 640) {
+  if (screen.Width > 640) {
     const nav = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     nav.setAttribute("id", "nav");
     nav.style.width = "100%";
