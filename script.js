@@ -14,7 +14,6 @@ import {
   isMobile,
 } from "./build/controllers/Mobile.controller";
 
-document.addEventListener("onload", checkIfMobileAndApllyStyle());
 checkIfMobileAndApllyStyle();
 checkIfIsMobileAndActivatesMenu();
 isMobile();
