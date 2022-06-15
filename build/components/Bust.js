@@ -66,7 +66,7 @@ export function Bust() {
       renderer.setSize(main.offsetWidth / 3, main.offsetHeight);
       camera.position.set(0, -130, 10);
     } else {
-      renderer.setSize(main.offsetWidth, main.offsetHeight);
+      renderer.setSize(main.offsetWidth / 2, main.offsetHeight);
       camera.position.set(0, -130, 10);
     }
 
