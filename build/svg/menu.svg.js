@@ -1,5 +1,5 @@
 export function CreatePageBtn() {
-  if (screen.Width > 640) {
+  if (screen.width > 640) {
     const nav = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     nav.setAttribute("id", "nav");
     nav.style.width = "100%";
@@ -13,7 +13,7 @@ export function CreatePageBtn() {
     
     <g>
     <foreignObject id="homeObj" x="0%" y="${10}%" width="300px" height='60px' stroke="#fff" >
-    <button id="home">${window.innerWidth}</button>
+    <button id="home">${screen.width}</button>
     
     </foreignObject>
     
