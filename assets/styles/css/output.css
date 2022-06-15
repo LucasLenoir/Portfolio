@@ -584,6 +584,14 @@ foreignObject:hover {
   width: 50%;
   top: 55%;
 }
+.isMobile .container_home #city {
+  width: 80px;
+  height: 80px;
+  z-index: 5000;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+}
 .isMobile .container_cases {
   grid-template: 20% 20% 50% 10%/100%;
   height: 100vh;
