@@ -54,7 +54,7 @@ export function Bust() {
   }
   function CHeckWindowAndSetSizeAndRatio() {
     renderer.setPixelRatio(main.offsetWidth / 3 / main.offsetHeight);
-    renderer.setSize(main.offsetWidth, height);
+    renderer.setSize(main.offsetWidth / 2, height);
     if (width < 672) {
       renderer.setSize(main.offsetWidth / 3, main.offsetHeight);
       camera.position.set(0, -130, 10);
