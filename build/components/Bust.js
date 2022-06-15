@@ -56,17 +56,17 @@ export function Bust() {
     renderer.setPixelRatio(main.offsetWidth / 3 / main.offsetHeight);
     renderer.setSize(main.offsetWidth / 3, height);
     if (width < 672) {
-      renderer.setSize(main.offsetWidth / 3, main.offsetHeight);
+      renderer.setSize(main.offsetWidth / 3, main.offsetHeight / 1.5);
       camera.position.set(0, -130, 10);
       camera.getEffectiveFOV(250);
     } else if (width < 1000) {
-      renderer.setSize(main.offsetWidth / 3, main.offsetHeight);
+      renderer.setSize(main.offsetWidth / 3, main.offsetHeight / 1.5);
       camera.position.set(0, -130, 10);
     } else if (width < 752) {
-      renderer.setSize(main.offsetWidth / 3, main.offsetHeight);
+      renderer.setSize(main.offsetWidth / 3, main.offsetHeight / 1.5);
       camera.position.set(0, -130, 10);
     } else {
-      renderer.setSize(main.offsetWidth / 3, main.offsetHeight);
+      renderer.setSize(main.offsetWidth / 3, main.offsetHeight / 1.5);
       camera.position.set(0, -130, 10);
     }
 
