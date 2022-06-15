@@ -1,10 +1,10 @@
 import { MenuController } from "./Menu.controller";
-import {CreatePageBtn} from "../svg/menu.svg"
+import { CreatePageBtn } from "../svg/menu.svg";
 let width = window.innerWidth;
 let height = window.innerHeight;
 
 export function checkIfMobileAndApllyStyle() {
-  if (window.innerWidth < 640) {
+  if (screen.width < 640) {
     if (document.getElementById("nav")) {
       document.getElementById("nav").remove();
 
@@ -73,13 +73,13 @@ export function isMobile() {
     ) {
       width = window.innerWidth;
       height = window.innerHeight;
-      if (window.innerWidth < 640) {
+      if (screen.width < 640) {
         if (!document.querySelector("body").classList.contains("isMobile")) {
           document.querySelector("body").classList.add("isMobile");
           checkIfMobileAndApllyStyle();
           checkIfIsMobileAndActivatesMenu();
         }
-      } else if (window.innerWidth > 640) {
+      } else if (screen.width > 640) {
         if (document.querySelector("body").classList.contains("isMobile")) {
           document.querySelector("body").classList.remove("isMobile");
 

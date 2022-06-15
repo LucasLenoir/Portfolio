@@ -13,7 +13,7 @@ export function CreatePageBtn() {
     
     <g>
     <foreignObject id="homeObj" x="0%" y="${10}%" width="300px" height='60px' stroke="#fff" >
-    <button id="home">${screen.width}</button>
+    <button id="home">home</button>
     
     </foreignObject>
     
