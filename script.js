@@ -14,13 +14,14 @@ import {
   isMobile,
 } from "./build/controllers/Mobile.controller";
 
+checkIfMobileAndApllyStyle();
+checkIfIsMobileAndActivatesMenu();
+isMobile();
 function homeControllers() {
   CreatePageBtn();
 
   MenuController();
 }
-
-checkIfMobileAndApllyStyle();
 
 function scroll() {
   if (window.innerWidth > 640) {
@@ -81,7 +82,5 @@ function scroll() {
   }
 }
 
-checkIfIsMobileAndActivatesMenu();
-isMobile();
 homeControllers();
 scroll();
