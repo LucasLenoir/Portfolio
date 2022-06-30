@@ -24,7 +24,7 @@ export const Contents = {
     h2: "Quizz Game",
     p: "What a pleasure to build a full JS web app. The project was to build a web app where the user could play random quiz games or create his own one through is personal account. All questions are related to a category and the user can check all his peronal stats for each category. ",
   },
-  resort: {
+  Movie: {
     h2: "The Movie App",
     p: "Research, Save into a watch list, watch movie trailers.. This App, built with REACT uses TMDB Api to offer users all they need to figure out the notorious question: What are we watching tonight? ",
   },

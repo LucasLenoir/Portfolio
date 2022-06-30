@@ -8,7 +8,7 @@ import githubPic from "/assets/icone/github.png";
 export default function MemoryView() {
   let container = document.getElementById("container");
   container.innerHTML = ``;
-  container.innerHTML = `<h1>${Contents.cases.h1}</h1><ul><li id="memory">${Contents.cases.li1}</li><li  id="quizz">${Contents.cases.li2}</li><li id="resort">${Contents.cases.li3}</li></ul/>`;
+  container.innerHTML = `<h1>${Contents.cases.h1}</h1><ul><li id="memory">${Contents.cases.li1}</li><li  id="quizz">${Contents.cases.li2}</li><li id="movie">${Contents.cases.li3}</li></ul/>`;
 
   if (window.innerWidth < 640) {
     let img = document.createElement("div");

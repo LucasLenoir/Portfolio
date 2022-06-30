@@ -8,23 +8,23 @@ import projectPic from "/assets/img/movieapplien.png";
 export default function MovieView() {
   const container = document.getElementById("container");
 
-  container.innerHTML = `<h1>${Contents.cases.h1}</h1><ul><li id="memory">${Contents.cases.li1}</li><li  id="quizz">${Contents.cases.li2}</li><li id="resort">${Contents.cases.li3}</li></ul/>`;
+  container.innerHTML = `<h1>${Contents.cases.h1}</h1><ul><li id="memory">${Contents.cases.li1}</li><li  id="quizz">${Contents.cases.li2}</li><li id="movie">${Contents.cases.li3}</li></ul/>`;
 
   if (window.innerWidth < 640) {
     const img = document.createElement("div");
     img.style.height = "100%";
     img.style.width = "100%";
     container.appendChild(img);
-    img.style.background = `center/ contain url('${resortC}') no-repeat`;
+    img.style.background = `center/ contain url('${MovieApp}') no-repeat`;
   }
 
   const txt = document.createElement("div");
   txt.classList.add("txt1");
-  txt.innerHTML = `<h2>${Contents.resort.h2}</h2>`;
+  txt.innerHTML = `<h2>${Contents.Movie.h2}</h2>`;
 
-  container.innerHTML += `<p>${Contents.resort.p}</p>`;
+  container.innerHTML += `<p>${Contents.Movie.p}</p>`;
   container.appendChild(txt);
-  document.getElementById("resort").classList.add("active");
+  document.getElementById("movie").classList.add("active");
 
   if (window.innerWidth > 640) {
     Case1(MovieApp);
@@ -47,12 +47,14 @@ export default function MovieView() {
     let projectLink = document.createElement("div");
     projectLink.setAttribute("id", "project");
     projectLink.style.background = ` center/ contain url('${projectPic}') no-repeat`;
+
     projectLink.style.width = "100px";
     projectLink.style.height = "100px";
 
     let projectLinkA = document.createElement("a");
     projectLinkA.style.display = "inline-block";
     projectLinkA.setAttribute("target", "_blank");
+   
     projectLinkA.style.width = "100%";
     projectLinkA.style.height = "100%";
 
