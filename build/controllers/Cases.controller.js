@@ -1,6 +1,6 @@
 import MemoryView from "../views/cases/memory.view";
 import QuizzView from "../views/cases/quizz.view";
-import ResortView from "../views/cases/resort.view";
+import ResortView from "../views/cases/movie.view";
 
 export function CasesController() {
   memory.addEventListener("click", () => MemoryView());
